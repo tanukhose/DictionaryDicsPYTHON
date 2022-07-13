@@ -61,3 +61,27 @@ print(n)
 # #         if a[h]==g:
 # #             d.update({h:g})
 # # print(d)
+
+
+# descending
+
+
+a={1:21,2:34,3:54,4:65,5:84}
+l=[]
+for i in a:
+    l.append(a[i])
+    for i in range(len(l)):
+        for j in range(len(l)):
+            if l[i]>l[j]:
+                l[i],l[j]=l[j],l[i]
+print(l)
+d={}
+for h in l:
+    for g in a:
+        if a[g]==h:
+            d.update({g:h})
+print(d)
+
+
+
+
